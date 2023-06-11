@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .product {
     /* "auto" aan de zijkanten zorgt ervoor dat het element in het midden komt te staan*/
     margin: 80px auto;
@@ -5,4 +15,78 @@
     width: 350px;
 }
 
-/* - Vul dit document aan met jouw eigen css! - */
+.product-image-wrapper {
+    /*We geven de afbeeldings-wrapper een relatieve positie, zodat de absolute posities vanaf hier gerekend worden*/
+    position: relative;
+}
+
+.fav-icon {
+    /*We positioneren het hartje rechtsonderin de afbeelding*/
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    height: 16px;
+}
+
+.new-sticker {
+    background-color: #e8e8e8;
+    color: #DE6127;
+    font-weight: 300;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    /*We positioneren de sticker links van de afbeelding*/
+    position: absolute;
+    top: 60px;
+    /*De sticker krijgt een min-waarde mee, omdat deze anders nooit buiten de afbeelding zou kunnen vallen*/
+    left: -70px;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-information p,
+.product-information h2 {
+    margin: 2px 0;
+}
+
+.product-label {
+    color: #737373;
+    font-size: 12px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product-color-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    /*Met deze property blijven ze op dezelfde regel*/
+    display: inline-block;
+    cursor: pointer;
+}
+
+/*Alleen als twee bolletjes naast elkaar staan, geven we ze wat tussenruimte*/
+.product-color-dot + .product-color-dot {
+    margin-left: 2px;
+}
+
+.color-pink {
+    background-color: #faa0c7;
+}
+
+.color-black {
+    background-color: #272729;
+}
+
+.color-beige {
+    background-color: #928471;
+}
+
+.color-taupe {
+    background-color: #c2c2b4;
+}* - Vul dit document aan met jouw eigen css! - */
